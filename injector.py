@@ -7,7 +7,7 @@ os.system("title Paradise Injector")
 
 while True:
     os.system("cls")
-    print("Welcome to Paradise Injector [v1.0]\n\nSelect an option\n[1] Inject DLL\n[2] Github\n[3] Exit\n")
+    print("Welcome to Paradise Injector!\n\nSelect an option:\n[1] Inject DLL\n[2] Github\n[3] Exit\n")
     user_choice = int(input(">> "))
     match user_choice:
 
