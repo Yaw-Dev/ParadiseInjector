@@ -63,6 +63,6 @@ while True:
             sys.exit(0)
 
         case _:
-            print("Invalid option!")
+            print("[-] Invalid option!")
             print("\n[>] Press any key to retry...")
             os.system("pause > nul")
