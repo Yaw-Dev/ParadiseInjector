@@ -17,6 +17,10 @@ while True:
                 print("ERROR: Selected file is not a DLL!")
                 print("\n[>] Press any key to retry...")
                 os.system("pause > nul")
+            elif not os.path.exists(dll_to_inject):
+                print("ERROR: DLL file does not exist!")
+                print("\n[>] Press any key to retry...")
+                os.system("pause > nul")
             else:
                 process_to_inject = str(input("[>] Enter a process to inject into.\n>> "))
                 if not process_to_inject.endswith(".exe"): process_to_inject = process_to_inject + ".exe"
