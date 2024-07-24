@@ -8,10 +8,10 @@ os.system("title Paradise Injector")
 while True:
     os.system("cls")
     print("Welcome to Paradise Injector!\n\nSelect an option:\n[1] Inject DLL\n[2] Github\n[3] Exit\n")
-    user_choice = int(input(">> "))
+    user_choice = input(">> ")
     match user_choice:
 
-        case 1:
+        case '1':
             dll_to_inject = str(input("\n[>] Drag your DLL file here.\n>> "))
             if not dll_to_inject.endswith(".dll"):
                 print("ERROR: Selected file is not a DLL!")
@@ -33,7 +33,7 @@ while True:
                     pass
             
             if process_found:
-                dll_to_inject = os.path.basename(dll_to_inject)
+                #dll_to_inject = os.path.basename(dll_to_inject)
                 print(f"[+] Process {process_name} located at PID:{process_id}")
                 print("\nPress any key to inject!")
                 os.system("pause > nul")
@@ -56,8 +56,13 @@ while True:
                 print("\n[>] Press any key to retry...")
                 os.system("pause > nul")
 
-        case 2:
+        case '2':
             os.system("start https://github.com/Yaw-Dev/ParadiseInjector")
 
-        case 3:
+        case '3':
             sys.exit(0)
+
+        case _:
+            print("Invalid option!")
+            print("\n[>] Press any key to retry...")
+            os.system("pause > nul")
